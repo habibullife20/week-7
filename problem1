@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int toMinutes(int h, int m) {
@@ -8,20 +7,20 @@ int toMinutes(int h, int m) {
 
 int convertTime(int current, int correct) {
     int diff = correct - current;
-    int ops = 0;
+    int count = 0;
 
-    ops += diff / 60;
+    count += diff / 60;
     diff %= 60;
 
-    ops += diff / 15;
+    count += diff / 15;
     diff %= 15;
 
-    ops += diff / 5;
+    count += diff / 5;
     diff %= 5;
 
-    ops += diff;
+    count += diff;
 
-    return ops;
+    return count;
 }
 
 int main() {
